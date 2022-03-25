@@ -63,7 +63,7 @@ const createWeather = (weather) => {
     document.getElementById('temp').innerHTML=weather.main.temp;
     document.getElementById('l-temp').innerHTML=weather.main.temp_min;
     document.getElementById('h-temp').innerHTML=weather.main.temp_max;
-    document.getElementById('humidity').innerHTML=weather.main.humidity;
+    document.getElementById('humidity').innerHTML=`${weather.main.humidity}%`;
     document.getElementById('forecast').innerHTML=weather.weather[0].main;
     document.getElementById('f-desc').innerHTML=weather.weather[0].description;
 };
@@ -72,7 +72,6 @@ const createWeather = (weather) => {
 const clearData = () => {
     document.querySelector('section').innerHTML=''
 };
-
 
 // clear button
 const clear = document.getElementsByClassName('btn-danger')[0]

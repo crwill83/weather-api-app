@@ -158,7 +158,10 @@
 
 .f-item { grid-area: f-item; }
 
-.f-desc { grid-area: f-desc; }
+.f-desc { 
+  grid-area: f-desc;
+  text-transform: capitalize;
+ }
 
 .rows {
   margin: auto;
