@@ -60,9 +60,9 @@ const createWeather = (weather) => {
     document.getElementById('city').innerHTML=weather.name;
     document.getElementById('lat').innerHTML=`Lat: ${weather.coord.lat}`;
     document.getElementById('long').innerHTML=`Long: ${weather.coord.lon}`;
-    document.getElementById('temp').innerHTML=weather.main.temp;
-    document.getElementById('l-temp').innerHTML=weather.main.temp_min;
-    document.getElementById('h-temp').innerHTML=weather.main.temp_max;
+    document.getElementById('temp').innerHTML=`${Math.round(weather.main.temp)}\xB0F`;
+    document.getElementById('l-temp').innerHTML=`${Math.round(weather.main.temp_min)}\xB0F`;
+    document.getElementById('h-temp').innerHTML=`${Math.round(weather.main.temp_max)}\xB0F`;
     document.getElementById('humidity').innerHTML=`${weather.main.humidity}%`;
     document.getElementById('forecast').innerHTML=weather.weather[0].main;
     document.getElementById('f-desc').innerHTML=weather.weather[0].description;
