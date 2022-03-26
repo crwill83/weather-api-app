@@ -67,17 +67,17 @@ const createWeather = (weather) => {
 };
 
 
-const clearData = () => {
-    document.querySelector('section').innerHTML=''
-};
-
-// clear button
-const clear = document.getElementsByClassName('btn-danger')[0]
-// add event listener to button
-clear.addEventListener('click', clearData)
-
-
 // bg JS
 document.querySelector( "#retrobg-sun" ).onclick = () => {
     document.querySelector( "#retrobg" ).classList.toggle( "retrobg-shutdown" );
   };
+
+
+// Run function on enter button
+var input = document.getElementById("input");
+    input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("load-weather").click();
+            }
+    });
