@@ -3,8 +3,6 @@ console.log('Hello')
 // API key for reference
 const weather_api_key = '7ed156b6edb91e815b025f6d94f6ce0c'
 
-// const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
-// const data = await res.json()
 const getWeatherByZip = async (zip) => {
     
     const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=7ed156b6edb91e815b025f6d94f6ce0c&units=imperial`);
@@ -79,3 +77,7 @@ const clear = document.getElementsByClassName('btn-danger')[0]
 clear.addEventListener('click', clearData)
 
 
+// bg JS
+document.querySelector( "#retrobg-sun" ).onclick = () => {
+    document.querySelector( "#retrobg" ).classList.toggle( "retrobg-shutdown" );
+  };

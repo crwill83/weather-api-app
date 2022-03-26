@@ -11,7 +11,7 @@
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 
-  background-image: url('micro_carbon.png');
+  background-image: url('/images/micro_carbon.png');
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
@@ -72,18 +72,19 @@
 
 .buttons {  
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "btn-get btn-clear";
+    "btn-get";
   grid-area: buttons;
+  justify-content: center;
 }
 
 .btn-get { grid-area: btn-get; }
 
-.btn-clear { grid-area: btn-clear; }
+/* .btn-clear { grid-area: btn-clear; } */
 
 .city { 
   grid-area: city;
@@ -149,7 +150,7 @@
 }
 
 .f-items {  display: grid;
-  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
