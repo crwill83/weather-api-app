@@ -77,3 +77,5 @@ const clearData = () => {
 const clear = document.getElementsByClassName('btn-danger')[0]
 // add event listener to button
 clear.addEventListener('click', clearData)
+
+
