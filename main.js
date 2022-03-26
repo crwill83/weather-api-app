@@ -73,11 +73,12 @@ document.querySelector( "#retrobg-sun" ).onclick = () => {
   };
 
 
-// Run function on enter button
+// Run function on enter button and clear input box
 var input = document.getElementById("input");
     input.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             event.preventDefault();
             document.getElementById("load-weather").click();
+            input.value=''
             }
     });
